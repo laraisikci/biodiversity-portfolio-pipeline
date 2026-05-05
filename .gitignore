@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+.coverage
+htmlcov/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Environments / secrets
+.env
+.env.local
+*.pem
+*.key
+
+# Data — never commit raw data
+data/raw/
+data/cached/
+data/documents/*.pdf
+data/processed/*.csv
+data/processed/*.parquet
+
+# Outputs (some teams commit, we won't to keep repo lean)
+outputs/logs/*.jsonl
+outputs/reports/*.pdf
+outputs/figures/*.png
+outputs/figures/*.html
+
+# Notebooks — checkpoint files
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# But keep these — they're examples
+!data/raw/README.md
+!data/processed/README.md
+!data/documents/README.md
+!outputs/logs/.gitkeep
