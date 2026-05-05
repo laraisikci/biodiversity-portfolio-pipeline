@@ -82,5 +82,5 @@ We use a **hybrid AI stack** — picking the right tool for each job:
 | Phase 2 | 9 → 15 May | Build real agents, replace stubs |
 | Clinic | 15 May | Prototype clinic with Prof. Bhattacharya |
 | Phase 3 | 15 → 22 May | Polish, dashboard, report assembly, rehearsal |
-| Final | 22 May | Presentation 18:15-20:15 |
+| Final | 22 May | Presentation |
 
