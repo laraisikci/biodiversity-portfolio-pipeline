@@ -1,7 +1,7 @@
 # Biodiversity-Aware Portfolio Pipeline
 
 Multi-agent AI research pipeline for sustainable portfolio construction.
-Sustainable Finance · Prof. Budha Bhattacharya ·
+Sustainable Finance 
 
 ## Python Skeleton
 
