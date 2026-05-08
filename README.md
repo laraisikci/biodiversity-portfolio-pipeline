@@ -1,6 +1,6 @@
 # Biodiversity-Aware Portfolio Pipeline
 
-Multi-agent AI research pipeline for sustainable portfolio construction.
+Multi-agent AI research pipeline for sustainable portfolio construction for the elective of
 Sustainable Finance 
 
 ## Python Skeleton
