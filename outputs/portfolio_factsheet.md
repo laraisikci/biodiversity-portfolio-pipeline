@@ -31,6 +31,25 @@ _Benchmark sources: EBA 2023 climate stress test reference (~150 tCO2e/€m). Th
 
 ---
 
+## Risk & Return
+
+_Backtested over 3 years using EURO STOXX 50 (`^STOXX50E`) as benchmark. Mapped 23/24 holdings (96% of weight). Risk-free rate: 2.5% (3-month Euribor reference)._
+
+| Metric | Portfolio | Benchmark (EURO STOXX 50) |
+|---|---|---|
+| Total return (3y) | 64.82% | 35.01% |
+| Annualised return | 17.87% | 10.38% |
+| Annualised volatility | 15.36% | 15.31% |
+| Sharpe ratio | 1.000 | 0.515 |
+| Max drawdown | -17.29% | -16.58% |
+| Best calendar year | 28.41% | 19.04% |
+| Worst calendar year | -6.21% | 0.54% |
+| Beta vs benchmark | 0.931 | 1.000 |
+
+_This is a **historical backtest** of the May 2026 portfolio composition applied retroactively. It is illustrative of risk characteristics, not predictive of future returns. The selection methodology relies on EU Taxonomy and ENCORE data not fully available throughout the backtest period, so results should be treated as directional._
+
+---
+
 ## Top Holdings
 
 | Rank | Company | Sector | Country | Weight | Composite ESG | Biodiversity | Carbon Intensity |

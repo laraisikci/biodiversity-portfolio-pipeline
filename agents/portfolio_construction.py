@@ -573,10 +573,165 @@ class PortfolioConstructionAgent(BaseAgent):
 
         return holdings
 
+    def compute_financial_metrics(
+        self,
+        portfolio: FinalPortfolio,
+        master: pd.DataFrame,
+        years: int = 3,
+    ) -> Dict:
+        """Fetch historical prices and compute portfolio risk/return metrics.
+
+        Backtest framing (for the report):
+          This is a HISTORICAL BACKTEST of the May 2026 portfolio composition
+          applied retroactively. It is illustrative of risk characteristics,
+          not predictive of future returns. The portfolio's selection
+          methodology relies on EU Taxonomy data (introduced 2022) and ENCORE
+          assessments (updated 2024), which were not fully available
+          throughout the backtest period.
+
+        Args:
+            portfolio: The constructed FinalPortfolio.
+            master: Master DataFrame (must contain Bloomberg tickers).
+            years: Backtest window length (default 3 years).
+
+        Returns:
+            Dict with portfolio metrics + benchmark metrics + summary.
+            Returns dict with 'error' key if price fetch fails.
+        """
+        from agents.financial_analysis import (
+            bloomberg_to_yahoo_ticker,
+            fetch_price_history,
+            compute_daily_returns,
+            compute_portfolio_returns,
+            compute_full_metrics,
+            EURO_STOXX_50_TICKER,
+        )
+
+        self.log(
+            decision_type="financial_metrics_start",
+            details={
+                "n_holdings": len(portfolio.holdings),
+                "backtest_years": years,
+                "benchmark": EURO_STOXX_50_TICKER,
+            },
+            confidence="reported",
+        )
+
+        # === Step 1: Build ticker map for portfolio holdings ===
+        # Need to look up each holding's Bloomberg ticker from the master,
+        # then convert to Yahoo format.
+        weights_by_yahoo_ticker: Dict[str, float] = {}
+        ticker_map: Dict[str, str] = {}  # company_id -> yahoo_ticker
+        unmapped_holdings = []
+
+        for h in portfolio.holdings:
+            # Find Bloomberg ticker for this company
+            bb_ticker = None
+            if "bloomberg_ticker" in master.columns:
+                row = master[master["company_id"] == h.company_id]
+                if len(row) > 0:
+                    bb_ticker = row["bloomberg_ticker"].iloc[0]
+
+            if bb_ticker:
+                yahoo = bloomberg_to_yahoo_ticker(bb_ticker)
+                if yahoo:
+                    weights_by_yahoo_ticker[yahoo] = h.weight
+                    ticker_map[h.company_id] = yahoo
+                else:
+                    unmapped_holdings.append(h.company_name)
+            else:
+                unmapped_holdings.append(h.company_name)
+
+        if not weights_by_yahoo_ticker:
+            return {
+                "error": (
+                    "No portfolio holdings could be mapped to Yahoo Finance "
+                    "tickers. Check that the master DataFrame includes "
+                    "'bloomberg_ticker' column from the Bloomberg integration."
+                ),
+                "unmapped_holdings": unmapped_holdings,
+            }
+
+        # === Step 2: Fetch price history ===
+        all_tickers = list(weights_by_yahoo_ticker.keys()) + [EURO_STOXX_50_TICKER]
+        try:
+            prices = fetch_price_history(all_tickers, years=years)
+        except Exception as e:
+            self.log(
+                decision_type="financial_metrics_failed",
+                details={"error": str(e)},
+                confidence="observed",
+            )
+            return {"error": f"yfinance fetch failed: {e}"}
+
+        if len(prices) == 0:
+            return {"error": "No price data returned from Yahoo Finance"}
+
+        # === Step 3: Compute returns ===
+        # Separate the benchmark from the holdings
+        benchmark_col = EURO_STOXX_50_TICKER if EURO_STOXX_50_TICKER in prices.columns else None
+        if benchmark_col:
+            benchmark_prices = prices[benchmark_col]
+            holdings_prices = prices.drop(columns=[benchmark_col])
+        else:
+            benchmark_prices = None
+            holdings_prices = prices
+
+        holdings_returns = compute_daily_returns(holdings_prices)
+        portfolio_returns = compute_portfolio_returns(
+            holdings_returns, weights_by_yahoo_ticker
+        )
+
+        benchmark_returns = None
+        if benchmark_prices is not None and len(benchmark_prices) > 0:
+            benchmark_returns = benchmark_prices.pct_change().dropna()
+
+        # === Step 4: Compute metrics for portfolio + benchmark ===
+        portfolio_metrics = compute_full_metrics(portfolio_returns, benchmark_returns)
+
+        benchmark_metrics = None
+        if benchmark_returns is not None and len(benchmark_returns) > 0:
+            benchmark_metrics = compute_full_metrics(benchmark_returns)
+
+        # === Step 5: Build the response ===
+        result = {
+            "portfolio": portfolio_metrics,
+            "benchmark": benchmark_metrics,
+            "benchmark_ticker": EURO_STOXX_50_TICKER,
+            "backtest_years": years,
+            "n_holdings_mapped": len(weights_by_yahoo_ticker),
+            "n_holdings_total": len(portfolio.holdings),
+            "n_holdings_unmapped": len(unmapped_holdings),
+            "unmapped_holdings": unmapped_holdings,
+            "weight_coverage": round(sum(weights_by_yahoo_ticker.values()), 3),
+        }
+
+        self.log(
+            decision_type="financial_metrics_complete",
+            details={
+                "n_holdings_mapped": result["n_holdings_mapped"],
+                "n_holdings_unmapped": result["n_holdings_unmapped"],
+                "weight_coverage": result["weight_coverage"],
+                "portfolio_ann_return": portfolio_metrics.get("annualised_return"),
+                "portfolio_ann_vol": portfolio_metrics.get("annualised_volatility"),
+                "portfolio_sharpe": portfolio_metrics.get("sharpe_ratio"),
+                "portfolio_max_dd": portfolio_metrics.get("max_drawdown"),
+            },
+            confidence="reported",
+            notes=(
+                f"Backtest over {years} years using EURO STOXX 50 as benchmark. "
+                f"Mapped {result['n_holdings_mapped']}/{result['n_holdings_total']} "
+                f"holdings ({result['weight_coverage']*100:.0f}% of weight)."
+            ),
+        )
+
+        return result
+
     def build_factsheet(
         self,
         portfolio: FinalPortfolio,
         output_path: Optional[Path] = None,
+        financial_metrics: Optional[Dict] = None,
     ) -> str:
         """Generate a one-page portfolio factsheet in Markdown.
 
@@ -591,6 +746,8 @@ class PortfolioConstructionAgent(BaseAgent):
         Args:
             portfolio: The final portfolio.
             output_path: If provided, save the factsheet to this path.
+            financial_metrics: Optional dict from compute_financial_metrics()
+                — adds a "Risk & Return" section to the factsheet.
 
         Returns:
             The factsheet content as a Markdown string.
@@ -648,6 +805,82 @@ class PortfolioConstructionAgent(BaseAgent):
             f"",
             f"---",
             f"",
+        ])
+
+        # === Risk & Return section (only if financial_metrics provided) ===
+        if financial_metrics and "error" not in financial_metrics:
+            port_m = financial_metrics["portfolio"]
+            bench_m = financial_metrics.get("benchmark")
+            years = financial_metrics.get("backtest_years", 3)
+            coverage_pct = financial_metrics.get("weight_coverage", 0) * 100
+
+            lines.extend([
+                f"## Risk & Return",
+                f"",
+                f"_Backtested over {years} years using EURO STOXX 50 "
+                f"(`{financial_metrics.get('benchmark_ticker', '^STOXX50E')}`) as benchmark. "
+                f"Mapped {financial_metrics.get('n_holdings_mapped')}/"
+                f"{financial_metrics.get('n_holdings_total')} holdings "
+                f"({coverage_pct:.0f}% of weight). "
+                f"Risk-free rate: {port_m.get('risk_free_rate_used', 0.025) * 100:.1f}% "
+                f"(3-month Euribor reference)._",
+                f"",
+                f"| Metric | Portfolio | Benchmark (EURO STOXX 50) |",
+                f"|---|---|---|",
+            ])
+
+            def _fmt_pct(v):
+                return f"{v * 100:.2f}%" if v is not None else "—"
+
+            def _fmt_num(v):
+                return f"{v:.3f}" if v is not None else "—"
+
+            lines.append(
+                f"| Total return ({years}y) | {_fmt_pct(port_m.get('total_return'))} "
+                f"| {_fmt_pct(bench_m.get('total_return')) if bench_m else '—'} |"
+            )
+            lines.append(
+                f"| Annualised return | {_fmt_pct(port_m.get('annualised_return'))} "
+                f"| {_fmt_pct(bench_m.get('annualised_return')) if bench_m else '—'} |"
+            )
+            lines.append(
+                f"| Annualised volatility | {_fmt_pct(port_m.get('annualised_volatility'))} "
+                f"| {_fmt_pct(bench_m.get('annualised_volatility')) if bench_m else '—'} |"
+            )
+            lines.append(
+                f"| Sharpe ratio | {_fmt_num(port_m.get('sharpe_ratio'))} "
+                f"| {_fmt_num(bench_m.get('sharpe_ratio')) if bench_m else '—'} |"
+            )
+            lines.append(
+                f"| Max drawdown | {_fmt_pct(port_m.get('max_drawdown'))} "
+                f"| {_fmt_pct(bench_m.get('max_drawdown')) if bench_m else '—'} |"
+            )
+            lines.append(
+                f"| Best calendar year | {_fmt_pct(port_m.get('best_year_return'))} "
+                f"| {_fmt_pct(bench_m.get('best_year_return')) if bench_m else '—'} |"
+            )
+            lines.append(
+                f"| Worst calendar year | {_fmt_pct(port_m.get('worst_year_return'))} "
+                f"| {_fmt_pct(bench_m.get('worst_year_return')) if bench_m else '—'} |"
+            )
+            if port_m.get("beta_vs_benchmark") is not None:
+                lines.append(
+                    f"| Beta vs benchmark | {_fmt_num(port_m['beta_vs_benchmark'])} | 1.000 |"
+                )
+
+            lines.extend([
+                f"",
+                f"_This is a **historical backtest** of the May 2026 portfolio composition "
+                f"applied retroactively. It is illustrative of risk characteristics, not "
+                f"predictive of future returns. The selection methodology relies on "
+                f"EU Taxonomy and ENCORE data not fully available throughout the backtest "
+                f"period, so results should be treated as directional._",
+                f"",
+                f"---",
+                f"",
+            ])
+
+        lines.extend([
             f"## Top Holdings",
             f"",
             f"| Rank | Company | Sector | Country | Weight | Composite ESG | Biodiversity | Carbon Intensity |",
