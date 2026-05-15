@@ -69,7 +69,24 @@ class FinalPortfolio(BaseModel):
 
     # Portfolio-level metrics vs benchmark
     portfolio_carbon_intensity: float
-    benchmark_carbon_intensity: float
+    benchmark_carbon_intensity: float = Field(
+        ..., description="Primary benchmark (e.g. EBA reference)"
+    )
+    benchmark_source: str = Field(
+        default="reference",
+        description="Source of the benchmark intensity (e.g. 'EBA 2023 stress test')",
+    )
+    empirical_universe_median: Optional[float] = Field(
+        default=None,
+        description=(
+            "Median carbon intensity of the empirical disclosing universe. "
+            "Reported alongside the reference benchmark for transparency."
+        ),
+    )
+    empirical_universe_size: Optional[int] = Field(
+        default=None,
+        description="Number of companies in the universe used for the empirical median.",
+    )
     portfolio_esg_score: float
     portfolio_biodiversity_score: float
 
