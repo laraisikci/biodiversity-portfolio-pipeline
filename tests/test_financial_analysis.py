@@ -36,11 +36,13 @@ def _build_synthetic_prices(n_days: int = 750, seed: int = 42) -> pd.DataFrame:
     """Build synthetic daily price series for 3 tickers."""
     np.random.seed(seed)
     dates = pd.date_range(end=datetime.now(), periods=n_days, freq="B")
+    # Use actual returned date length (pandas may return n-1 if end is non-business day)
+    actual_n = len(dates)
     # Three tickers with different return/vol profiles
     returns = pd.DataFrame({
-        "ASML.AS": np.random.normal(0.0008, 0.018, n_days),  # high return, high vol
-        "SAN.MC":  np.random.normal(0.0004, 0.014, n_days),  # mid return, mid vol
-        "ENEL.MI": np.random.normal(0.0002, 0.012, n_days),  # low return, low vol
+        "ASML.AS": np.random.normal(0.0008, 0.018, actual_n),
+        "SAN.MC":  np.random.normal(0.0004, 0.014, actual_n),
+        "ENEL.MI": np.random.normal(0.0002, 0.012, actual_n),
     }, index=dates)
     prices = (1 + returns).cumprod() * 100
     return prices
@@ -92,7 +94,7 @@ def test_daily_returns_basic():
     prices = _build_synthetic_prices(50)
     returns = compute_daily_returns(prices)
     # First row is dropped (no prior price); rest preserved
-    assert len(returns) == 49
+    assert len(returns) == len(prices) - 1
     # Check the math on a single point
     expected = prices.iloc[1, 0] / prices.iloc[0, 0] - 1
     assert abs(returns.iloc[0, 0] - expected) < 1e-9
