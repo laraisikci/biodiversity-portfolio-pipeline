@@ -1,0 +1,223 @@
+{
+  "company_id": "ALV_ALLIANZ",
+  "company_name": "Allianz Group",
+  "document_path": "data/documents/allianz_sustainability_2025.pdf",
+  "document_year": 2025,
+  "extraction_date": "2026-05-16T11:13:03.668462",
+  "biodiversity_commitments": [
+    {
+      "text": "The ASIS incorporates screening criteria into our commercial insurance underwriting and (non-listed) proprietary investments to identify, address and mitigate business activities with the potential to trigger biodiversity-related impacts as part of the due diligence and referral process.",
+      "category": "biodiversity",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 83
+    },
+    {
+      "text": "To address land (e.g., land artificialization), freshwater and sea use changes – as well as impacts to the extent and condition of ecosystems from land degradation, desertification, and soil sealing, the Allianz Group screens business activities for negative impacts to biodiversity-sensitive areas.",
+      "category": "biodiversity",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 83
+    },
+    {
+      "text": "Nature Action 100 is a global investor-led engagement initiative which aims to reverse nature and biodiversity loss. AIM actively contributes to two company engagements in the food and beverage retail sector.",
+      "category": "biodiversity",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 84
+    },
+    {
+      "text": "Spring is a PRI stewardship initiative for nature which aims to halt and reverse forest loss and land degradation with a focus on political engagements. AIM actively contributes to two company engagements in the mining and food sectors.",
+      "category": "biodiversity",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 84
+    },
+    {
+      "text": "Mining 2030 is an investor-led initiative which aims for a socially and environmentally responsible mining sector with biodiversity, land, and protected areas as one of the key focus areas.",
+      "category": "biodiversity",
+      "target_year": 2030,
+      "is_quantitative": false,
+      "source_page": 84
+    },
+    {
+      "text": "We also do not invest proprietary assets in or insure standalone/ single-site risks for upstream deep seabed mining projects",
+      "category": "biodiversity",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 81
+    }
+  ],
+  "tnfd_adopter": true,
+  "no_deforestation_pledge": true,
+  "biodiversity_target_year": null,
+  "climate_targets": [
+    {
+      "text": "committed to achieve net-zero GHG emissions by 2050 for our proprietary investment and Property-Casualty insurance portfolios and set 2030 intermediate targets, consistent with a maximum temperature rise of 1.5°C",
+      "category": "climate",
+      "target_year": 2050,
+      "is_quantitative": false,
+      "source_page": 46
+    },
+    {
+      "text": "For our proprietary investment (corporates) portfolio, we target a 50% reduction in absolute GHG emissions for listed corporates, and a 50% reduction in our gross-emission intensity for listed and non-listed corporate exposure by 2030, both against a 2019 baseline.",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 46
+    },
+    {
+      "text": "For our proprietary Investment (real estate) portfolio, we have set the target for major parts of our real estate portfolio to align with 1.5 °C pathways of the Carbon Risk Real Estate Monitor (CRREM) by 2030.",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 46
+    },
+    {
+      "text": "For commercial insurance, we target a 45% reduction in the insurance-associated emission intensity of our in-scope sub-portfolio of large corporate companies insured by Allianz Global Corporate & Specialty SE (AGCS), for which GHG emission data is available, by 2030 against a 2022 baseline.",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 46
+    },
+    {
+      "text": "For motor retail insurance, we target a 30% reduction in the absolute carbon emissions within our in-scope portfolios by 2030, against a 2022 baseline.",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 46
+    },
+    {
+      "text": "For our own operations, we target a 65% reduction in the emissions per employee against a 2019 baseline.",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 46
+    },
+    {
+      "text": "First, we have set a quantitative 2030 target to increase investments in low-carbon solutions to € 57 bn compared to year-end 2023 an increase of € 20 bn as a means to seize opportunities and support our positive impact.",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 59
+    },
+    {
+      "text": "By 2030, we intend to profitably grow revenues from low-carbon solutions in Commercial Property Damage as well as Business Interruption coverages by 150% against a 2022 baseline.",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 50
+    },
+    {
+      "text": "Within our portfolio steering lever, we aim to adjust the mix of our portfolio such that the share of BEVs (number of passenger vehicles) in our motor portfolio will exceed the share of BEVs within the in-scope markets by 2030.",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 51
+    }
+  ],
+  "net_zero_year": 2050,
+  "sbti_status": "committed",
+  "water_disclosures": [
+    {
+      "text": "This covers the material sustainability matters “Water consumption” and “Water withdrawals.”",
+      "category": "water",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 79
+    },
+    {
+      "text": "We have not set any measurable outcome-oriented targets and actions for water and marine resources across our insurance and proprietary investment portfolios.",
+      "category": "water",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 79
+    },
+    {
+      "text": "Given the digital nature of our financial products, we do not rely on water or marine resources in the product design processes and have therefore not adopted policies related to water treatment toward more sustainable sourcing of water.",
+      "category": "water",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 81
+    },
+    {
+      "text": "Currently, screening criteria to identify business activities with poor water management practices, such as via over-extraction, depletion of aquifers, or local/trans-boundary water resources, address water management issues within the Sensitive Business Areas (SBAs) of Metals & Mining, Construction & Engineering, Oil & Gas, Utilities, Agriculture, Farming & Fishing, Forestry & Paper Products, and Pharmaceuticals & Biotechnology.",
+      "category": "water",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 81
+    }
+  ],
+  "water_stress_disclosed": true,
+  "forest_risk_commodities_mentioned": [],
+  "supply_chain_claims": [
+    {
+      "text": "Our due diligence approach in own operations and supply chain is based on the legal obligations of the German Supply Chain Due Diligence Act (GSCA).",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 28
+    },
+    {
+      "text": "At the Allianz Group, we have integrated sustainability considerations into supplier management at various stages for relevant subsidiaries (see the section Management of relationships with suppliers).",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 42
+    },
+    {
+      "text": "Our VCoC spells out our minimum expectations toward our suppliers regarding environmental protections, human rights, and employment standards, based on ILO fundamental conventions, as well as governance issues, including bribery and corruption, data privacy, and sanctions. Suppliers over a defined threshold are screened against additional sustainability-related topics.",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 42
+    },
+    {
+      "text": "As the basis for managing impacts on workers in our supply chain, we have the Allianz Group Standard for Procurement in conjunction with the Allianz Group Vendor Code of Conduct (VCoC) in place. They cover topics such as working conditions, equal treatment and opportunities for all, other work-related rights, and child labor and forced labor, including human trafficking.",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 107
+    }
+  ],
+  "top_sustainability_claims": [
+    {
+      "text": "At Allianz, we aspire to be the trusted partner for all our customers – helping them protect and grow what matters most in their lives.",
+      "category": "other",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 4
+    },
+    {
+      "text": "Our purpose – We secure your future – guides our actions across the Allianz Group. A more secure future is a more sustainable future, and so our ambition is to actively support the transition toward a more sustainable economy in collaboration with our value chain, focusing on measurable actions, transparent reporting, and long-term positive impacts across societies, economies, and the environment.",
+      "category": "other",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 28
+    },
+    {
+      "text": "Allianz is contributing to prevent climate change from worsening by reducing greenhouse gas emissions.",
+      "category": "climate",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 45
+    },
+    {
+      "text": "Allianz is acting to prepare for and adjust to the impacts of current and future climate change risks.",
+      "category": "climate",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 45
+    },
+    {
+      "text": "Allianz is determined to help create a sustainable economy where opportunity and protection are accessible to all.",
+      "category": "other",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 5
+    }
+  ],
+  "document_summary": "The Allianz Group's Annual Report 2025 outlines its strong commitment to sustainability, particularly in achieving net-zero GHG emissions by 2050 with intermediate 2030 targets across investments, insurance, and operations. The report details strategies for climate change mitigation and adaptation, while also addressing biodiversity and water-related risks through due diligence and engagement in initiatives. The company emphasizes its role as a trusted partner ensuring financial security, promoting ethical conduct, and fostering a sustainable, inclusive economy.",
+  "extraction_confidence": "high",
+  "extraction_notes": "The document provides extensive quantitative targets and detailed information for climate change. Biodiversity and water-related targets are less quantitative, with an explicit statement of no measurable targets for biodiversity. Information on forest-risk commodities does not list specific commodities but generally states a commitment to sustainable sourcing. The SBTi status is interpreted as 'committed' based on alignment with 1.5C pathways, as full 'validated' status for the entire company is not explicitly stated."
+}

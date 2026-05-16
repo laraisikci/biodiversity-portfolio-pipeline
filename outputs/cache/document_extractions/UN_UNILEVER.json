@@ -1,0 +1,180 @@
+{
+  "company_id": "UN_UNILEVER",
+  "company_name": "Unilever Group",
+  "document_path": "data/documents/unilever_sustainability_2025.pdf",
+  "document_year": 2025,
+  "extraction_date": "2026-05-16T11:08:53.023252",
+  "biodiversity_commitments": [
+    {
+      "text": "Implement regenerative agriculture practices on 1 million hectares of agricultural land by 2030.",
+      "category": "biodiversity",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 33
+    },
+    {
+      "text": "Help protect and restore 1 million hectares of natural ecosystems by 2030.",
+      "category": "biodiversity",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 33
+    },
+    {
+      "text": "Maintain no deforestation across our primary deforestation-linked commodities 95%.",
+      "category": "biodiversity",
+      "target_year": null,
+      "is_quantitative": true,
+      "source_page": 33
+    },
+    {
+      "text": "We have plans to increase the implementation of our regenerative agriculture initiatives to more than 400,000 hectares through supplier programmes and co-investment through our Regenerative Agriculture Fund in 2026.",
+      "category": "biodiversity",
+      "target_year": 2026,
+      "is_quantitative": true,
+      "source_page": 243
+    }
+  ],
+  "tnfd_adopter": false,
+  "no_deforestation_pledge": true,
+  "biodiversity_target_year": 2030,
+  "climate_targets": [
+    {
+      "text": "Reduce absolute operational GHG emissions (Scope 1 & 2) by 100% by 2030 from a 2015 baseline.",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 33
+    },
+    {
+      "text": "Reduce absolute Scope 3 energy and industrial (E&I) GHG emissions by 42% by 2030 from a 2021 baseline.",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 33
+    },
+    {
+      "text": "Reduce absolute Scope 3 forest, land and agriculture (FLAG) GHG emissions by 30.3% by 2030 from a 2021 baseline.",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 33
+    },
+    {
+      "text": "Our long-term ambition to achieve net zero GHG emissions by 2039.",
+      "category": "climate",
+      "target_year": 2039,
+      "is_quantitative": false,
+      "source_page": 225
+    }
+  ],
+  "net_zero_year": 2039,
+  "sbti_status": "validated",
+  "water_disclosures": [
+    {
+      "text": "Implement water stewardship programmes in 100 locations in water-stressed areas by 2030.",
+      "category": "water",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 33
+    },
+    {
+      "text": "Water shortages in areas of high water stress - Negative Impact - Own Operations; Value Chain.",
+      "category": "water",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 219
+    }
+  ],
+  "water_stress_disclosed": true,
+  "forest_risk_commodities_mentioned": [
+    "palm oil",
+    "paper and board",
+    "tea",
+    "soy",
+    "cocoa"
+  ],
+  "supply_chain_claims": [
+    {
+      "text": "Suppliers representing 50% of our procurement spend to sign the Living Wage Promise by 2026.",
+      "category": "supply_chain",
+      "target_year": 2026,
+      "is_quantitative": true,
+      "source_page": 33
+    },
+    {
+      "text": "Help 250,000 smallholder farmers in our supply chain access livelihoods programmes by 2026.",
+      "category": "supply_chain",
+      "target_year": 2026,
+      "is_quantitative": true,
+      "source_page": 33
+    },
+    {
+      "text": "Help 2.5 million SMEs in our retail value chain grow their business by 2026.",
+      "category": "supply_chain",
+      "target_year": 2026,
+      "is_quantitative": true,
+      "source_page": 33
+    },
+    {
+      "text": "In 2025, we sourced 81% of our key crops sustainably.",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": true,
+      "source_page": 243
+    },
+    {
+      "text": "Our goal is to source 95% of our key crops sustainably by 2030.",
+      "category": "supply_chain",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 243
+    },
+    {
+      "text": "In 2025, we exceeded 95% purchase volumes of palm oil, paper and board, tea, soy and cocoa as deforestation-free, based on Unilever’s requirements.",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": true,
+      "source_page": 243
+    }
+  ],
+  "top_sustainability_claims": [
+    {
+      "text": "Protecting and enhancing the value of our business through innovation, operational efficiency and long-term resilience.",
+      "category": "other",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 8
+    },
+    {
+      "text": "Reduce absolute operational GHG emissions (Scope 1 & 2) by 100% by 2030 from a 2015 baseline.",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 33
+    },
+    {
+      "text": "We increased our use of post-consumer recycled (PCR) plastic this year, achieving our goal of 25% PCR by 2025.",
+      "category": "other",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 32
+    },
+    {
+      "text": "Help protect and restore 1 million hectares of natural ecosystems by 2030.",
+      "category": "biodiversity",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 32
+    },
+    {
+      "text": "Suppliers representing 50% of our procurement spend to sign the Living Wage Promise by 2026.",
+      "category": "supply_chain",
+      "target_year": 2026,
+      "is_quantitative": true,
+      "source_page": 32
+    }
+  ],
+  "document_summary": "Unilever's 2025 Annual Report highlights accelerated business transformation and progress towards sustainability goals across climate, nature, plastics, and livelihoods. Key achievements include SBTi-validated GHG reduction targets, increased use of recycled plastic, and commitments to deforestation-free sourcing and water stewardship. The report emphasizes driving value creation through a sharper portfolio, elevated brands, and improved execution, all underpinned by its comprehensive sustainability agenda.",
+  "extraction_confidence": "high",
+  "extraction_notes": "The document explicitly states alignment with TNFD scenarios on page 227, but not explicit adoption of the TNFD framework for reporting, hence 'tnfd_adopter' is false. All other requested information was clearly found with specific figures and years."
+}

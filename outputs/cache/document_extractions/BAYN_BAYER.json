@@ -1,0 +1,178 @@
+{
+  "company_id": "BAYN_BAYER",
+  "company_name": "Bayer Group",
+  "document_path": "data/documents/bayer_sustainability_2025.pdf",
+  "document_year": 2025,
+  "extraction_date": "2026-05-16T11:01:14.088947",
+  "biodiversity_commitments": [
+    {
+      "text": "By 2030, we want to reduce the treated-area-weighted environmental impact per hectare of Bayer’s global crop protection portfolio by 30%.",
+      "category": "biodiversity",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 180
+    },
+    {
+      "text": "We pursue a comprehensive approach to reduce soil degradation and the decline in biodiversity. This is expected to significantly improve soil health, increase carbon capture in the soil and effectively protect against erosion.",
+      "category": "biodiversity",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 174
+    },
+    {
+      "text": "Through our double materiality assessment, we have therefore identified a potential positive impact related to reducing the pressure of additional land-use change by empowering farmers to increase their yields while minimizing environmental impacts.",
+      "category": "biodiversity",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 178
+    }
+  ],
+  "tnfd_adopter": false,
+  "no_deforestation_pledge": true,
+  "biodiversity_target_year": 2030,
+  "climate_targets": [
+    {
+      "text": "Our target is to achieve net zero greenhouse gas emissions including the entire value chain by 2050.",
+      "category": "climate",
+      "target_year": 2050,
+      "is_quantitative": true,
+      "source_page": 147
+    },
+    {
+      "text": "By 2029, we aim to reduce our greenhouse gas emissions in our own operations by 42% (in absolute terms) compared with the 2019 baseline.",
+      "category": "climate",
+      "target_year": 2029,
+      "is_quantitative": true,
+      "source_page": 146
+    },
+    {
+      "text": "We now want to achieve a 25% reduction in Scope 3 greenhouse gas emissions by 2029 (compared to the base year 2019).",
+      "category": "climate",
+      "target_year": 2029,
+      "is_quantitative": true,
+      "source_page": 146
+    },
+    {
+      "text": "We will offset the remaining greenhouse gas emissions from our own operational processes (Scope 1 and 2) by 2030 by purchasing certificates from verified climate protection projects.",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 141
+    },
+    {
+      "text": "By 2030, we aim to switch our fleet over to electric vehicles wherever technically and economically feasible.",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": false,
+      "source_page": 134
+    }
+  ],
+  "net_zero_year": 2050,
+  "sbti_status": "validated",
+  "water_disclosures": [
+    {
+      "text": "In our Crop Science Division, we have set ourselves the target of supporting our smallholder customers in increasing water productivity by 25% by 2030 against a 2019 to 2021 average baseline through the transformation of rice cropping in the relevant regions where Bayer operates, starting in India.",
+      "category": "water",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 170
+    },
+    {
+      "text": "By 2030, our Pharmaceuticals and Consumer Health divisions aim to reduce water withdrawal by 20% compared to the base year 2024, weighted by the local water scarcity and our share of the region’s total withdrawal.",
+      "category": "water",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 170
+    },
+    {
+      "text": "The establishment of water management systems at all relevant sites in regions affected by water scarcity is scheduled for completion by 2030.",
+      "category": "water",
+      "target_year": 2030,
+      "is_quantitative": false,
+      "source_page": 169
+    },
+    {
+      "text": "Our total water consumption in 2025 was 21.35 million m3 (2024: 21.01 million m3).",
+      "category": "water",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 171
+    }
+  ],
+  "water_stress_disclosed": true,
+  "forest_risk_commodities_mentioned": [
+    "corn",
+    "soybean",
+    "biofuels"
+  ],
+  "supply_chain_claims": [
+    {
+      "text": "Our Bayer Supplier Code of Conduct outlines the most important social, environmental and ethical standards. By communicating this code and what we therefore expect from our suppliers, we want to counteract potential negative impacts that could occur in our supply chain.",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 128
+    },
+    {
+      "text": "A total of 123 suppliers were included in the development process in 2025 (2024: 122 suppliers) within the scope of the Supplier Development Program.",
+      "category": "supply_chain",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 209
+    },
+    {
+      "text": "We work to prevent child labor through our Child Care Program. The program is currently established in India, Bangladesh, Thailand, Indonesia and the Philippines.",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 210
+    },
+    {
+      "text": "We support our suppliers in this transition, especially within the context of our meetings with them. In our supplier segmentation, we also integrate the share of electricity from renewable sources that our suppliers use.",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 142
+    }
+  ],
+  "top_sustainability_claims": [
+    {
+      "text": "Our mission: “Health for all, Hunger for none.”",
+      "category": "other",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 6
+    },
+    {
+      "text": "In 2025, together with our partners, we put self-care in reach for 82 million people in economically or medically underserved communities.",
+      "category": "other",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 9
+    },
+    {
+      "text": "We enabled access to modern contraception for 68 million women in low- and middle-income countries.",
+      "category": "other",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 9
+    },
+    {
+      "text": "We also supported 53 million smallholder farmers with our products and services.",
+      "category": "other",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 9
+    },
+    {
+      "text": "Our strategy to empower smallholder farmers is publicly available on our website.",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 218
+    }
+  ],
+  "document_summary": "The Bayer Group's 2025 Annual Report highlights its mission \"Health for all, Hunger for none,\" with significant progress in sustainability targets, including reaching 82 million people with self-care, 68 million women with modern contraception, and supporting 53 million smallholder farmers in 2025. The company also reported SBTi-validated net-zero emissions targets by 2050 and set quantitative reduction targets for GHG emissions and water withdrawal by 2030, alongside commitments to no-deforestation in its agricultural value chain.",
+  "extraction_confidence": "high",
+  "extraction_notes": "The document is comprehensive and clearly structured, making extraction straightforward. Forest-risk commodities (corn, soybean, biofuels) are inferred from mentions related to agricultural products and initiatives to prevent deforestation in farming, rather than explicit statements of Bayer directly sourcing these as 'forest-risk commodities'."
+}

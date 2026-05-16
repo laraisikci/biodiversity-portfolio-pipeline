@@ -1,0 +1,181 @@
+{
+  "company_id": "OR_LOREAL",
+  "company_name": "L'ORÉAL",
+  "document_path": "data/documents/loreal_sustainability_2025.pdf",
+  "document_year": 2025,
+  "extraction_date": "2026-05-16T11:05:11.372612",
+  "biodiversity_commitments": [
+    {
+      "text": "By 2030, sustainably source at least 90% of biobased materials used in formulas and packaging.",
+      "category": "biodiversity",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 198
+    },
+    {
+      "text": "By 2030, source over 75% of ingredients used in formulas from nature (plants or minerals) or recycled materials.",
+      "category": "biodiversity",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 198
+    },
+    {
+      "text": "By 2030, regenerate more land than the Group’s footprint to enhance the health and resilience of priority ecosystems.",
+      "category": "biodiversity",
+      "target_year": 2030,
+      "is_quantitative": false,
+      "source_page": 198
+    },
+    {
+      "text": "by 2030, the L’Oréal Fund for Nature Regeneration will have invested €50 million to help restore 1 million hectares of degraded ecosystems, capture 15 to 20 million tonnes of CO2 and create hundreds of jobs",
+      "category": "biodiversity",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 38
+    }
+  ],
+  "tnfd_adopter": true,
+  "no_deforestation_pledge": true,
+  "biodiversity_target_year": 2030,
+  "climate_targets": [
+    {
+      "text": "By 2030, reduce absolute Scopes 1 & 2 greenhouse gas emissions by 57% compared to 2019",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 198
+    },
+    {
+      "text": "By 2030, reduce absolute Scope 3 greenhouse gas emissions from purchased goods and services, upstream transportation and distribution and business travel, by 28% compared to 2019",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 198
+    },
+    {
+      "text": "By 2030, reach 100% renewable energy use on operated sites and stores.",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 198
+    },
+    {
+      "text": "By 2050, reduce overall emissions by 90%, with any residual emissions offset to achieve net zero.",
+      "category": "climate",
+      "target_year": 2050,
+      "is_quantitative": true,
+      "source_page": 208
+    }
+  ],
+  "net_zero_year": 2050,
+  "sbti_status": "validated",
+  "water_disclosures": [
+    {
+      "text": "By 2030, use 100% recycled or reused water for industrial purposes in factories.",
+      "category": "water",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 198
+    },
+    {
+      "text": "By 2030, offer water-saving products or technologies to enable consumers in water-stressed markets to meet their hygiene and beauty needs.",
+      "category": "water",
+      "target_year": 2030,
+      "is_quantitative": false,
+      "source_page": 198
+    },
+    {
+      "text": "Total water consumption in areas at water risk, including areas of high water stress: 383,008 cu.m.",
+      "category": "water",
+      "target_year": null,
+      "is_quantitative": true,
+      "source_page": 225
+    },
+    {
+      "text": "Total water recycled and reused: 940,246 cu.m.",
+      "category": "water",
+      "target_year": null,
+      "is_quantitative": true,
+      "source_page": 225
+    }
+  ],
+  "water_stress_disclosed": true,
+  "forest_risk_commodities_mentioned": [
+    "palm oil",
+    "soy",
+    "timber",
+    "coconut",
+    "oil crops",
+    "sugar crops"
+  ],
+  "supply_chain_claims": [
+    {
+      "text": "By 2030, help 100,000 people from disadvantaged communities gain access to employment.",
+      "category": "supply_chain",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 198
+    },
+    {
+      "text": "By 2030, have 100% of strategic suppliers sign a living wage pledge with a time-bound action plan.",
+      "category": "supply_chain",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 198
+    },
+    {
+      "text": "In 2025, 100% of the palm oil and 99.9% of palm derivatives purchased by the Group is Roundtable on Sustainable Palm Oil (RSPO) certified.",
+      "category": "supply_chain",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 178
+    },
+    {
+      "text": "In 2025, 99.9% of recycled plastics in the Group’s packaging were traced back to the country of origin (waste collection).",
+      "category": "supply_chain",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 180
+    }
+  ],
+  "top_sustainability_claims": [
+    {
+      "text": "L'Oréal for the Future programme is now based on four key pillars: stewarding the climate transition; safeguarding nature; driving circularity; supporting communities.",
+      "category": "other",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 38
+    },
+    {
+      "text": "The only company in the world to be awarded a triple ‘A’ rating by CDP for ten years in a row.",
+      "category": "other",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 22
+    },
+    {
+      "text": "By 2050, reduce overall emissions by 90%, with any residual emissions offset to achieve net zero.",
+      "category": "climate",
+      "target_year": 2050,
+      "is_quantitative": true,
+      "source_page": 208
+    },
+    {
+      "text": "By 2030, help 100,000 people from disadvantaged communities gain access to employment.",
+      "category": "supply_chain",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 51
+    },
+    {
+      "text": "By 2030, reduce the use of virgin plastic for product packaging by 50% in absolute terms, compared to 2019.",
+      "category": "circularity",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 51
+    }
+  ],
+  "document_summary": "The 2025 L'Oréal Universal Registration Document outlines the company's strong commitment to sustainability, guided by its \"L'Oréal for the Future\" program with ambitious 2030 and 2050 targets across climate, nature, circularity, and communities. L'Oréal reports progress on its SBTi-validated net-zero pathway, deforestation-free supply chains, and significant reductions in virgin plastic and water use. The report emphasizes the integration of ESG principles into governance, R&I, and supply chain management, highlighting significant investments in AI and Beauty Tech, supported by strong financial performance and external recognitions like the CDP \"AAA\" rating and EcoVadis Platinum status.",
+  "extraction_confidence": "high",
+  "extraction_notes": "The document provides detailed quantitative targets and outcomes for 2025 related to various sustainability aspects, aligned with CSRD requirements. Information on newly acquired entities is consistently excluded from some sustainability metrics, as noted in the methodological section. The TNFD adoption is explicitly stated, indicating a comprehensive approach to nature-related disclosures. The document provides clear explanations for targets and their status."
+}

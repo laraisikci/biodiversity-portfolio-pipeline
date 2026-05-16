@@ -1,0 +1,283 @@
+{
+  "company_id": "SAN_SANOFI",
+  "company_name": "Sanofi",
+  "document_path": "data/documents/sanofi_sustainability_2025.pdf",
+  "document_year": 2025,
+  "extraction_date": "2026-05-16T11:21:07.446955",
+  "biodiversity_commitments": [
+    {
+      "text": "Assess biodiversity impacts and dependencies to ecosystem services as well as associated risks covering the entire Sanofi value chain",
+      "category": "biodiversity",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 46
+    },
+    {
+      "text": "Ensure the preservation of biodiversity surrounding Sanofi sites, particularly in proximity to sensitive or protected areas",
+      "category": "biodiversity",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 46
+    },
+    {
+      "text": "Strive to ensure sustainable sourcing of key raw materials",
+      "category": "biodiversity",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 46
+    },
+    {
+      "text": "Determine the fair distribution of benefits resulting from products derived from biodiversity on the market and the controlled use of natural plants and wild animal species in research projects to discover new drugs",
+      "category": "biodiversity",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 46
+    },
+    {
+      "text": "Reduce and replace Limulus Ameboctye Lysate (LAL) in pharmaceutical testing processes",
+      "category": "biodiversity",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 46
+    },
+    {
+      "text": "We strive to use natural resources responsibly and sustainably, and therefore protect horseshoe crab populations.",
+      "category": "biodiversity",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 47
+    },
+    {
+      "text": "Our policy prioritizes the avoidance and reduction of horseshoe crab blood-derived materials, such as Limulus Amebocyte Lysate (LAL), in pharmaceutical testing.",
+      "category": "biodiversity",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 47
+    }
+  ],
+  "tnfd_adopter": true,
+  "no_deforestation_pledge": true,
+  "biodiversity_target_year": null,
+  "climate_targets": [
+    {
+      "text": "We aim for net zero GHG emissions in FY 2045, with intermediate targets in 2030",
+      "category": "climate",
+      "target_year": 2045,
+      "is_quantitative": true,
+      "source_page": 20
+    },
+    {
+      "text": "In FY 2030, reduce absolute Scope 1 & 2 emissions By 55% vs 2019",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 21
+    },
+    {
+      "text": "In FY 2030, reduce absolute Scope 3 emissions By 30% vs 2019",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 21
+    },
+    {
+      "text": "In FY 2045, reduce absolute Scope 1,2 & 3 emissions By 90% vs 2019 (net zero target)",
+      "category": "climate",
+      "target_year": 2045,
+      "is_quantitative": true,
+      "source_page": 21
+    },
+    {
+      "text": "Source renewable electricity vs target of 100% by FY 2030 Performance in 2025: 86%",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 21
+    },
+    {
+      "text": "Sanofi commits to reduce absolute Scope 1 & 2 GHG emissions 55% by 2030 from a 2019 baseline year.",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 113
+    },
+    {
+      "text": "On Scope 3, Sanofi commits to reduce absolute Purchased Goods and Services (3.1), Capital Goods (3.2), Fuel and Energy related activities not included in Scope 1 & 2 (3.3), Upstream Transportation and Distribution (3.4), Waste generated in operations (3.5), Business Travel (3.6) and Employee Commuting (3.7) GHG emissions 30% by 2030 from a 2019 baseline year.",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 113
+    }
+  ],
+  "net_zero_year": 2045,
+  "sbti_status": "committed",
+  "water_disclosures": [
+    {
+      "text": "Our ambition for nature focuses on ... seeing water as a valuable local resource",
+      "category": "water",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 20
+    },
+    {
+      "text": "by striving to limit our water withdrawals and setting context-based targets for priority sites, we are also reinforcing our programs to monitor and mitigate the potential impacts of pharmaceuticals in the environment throughout our products' lifecycle.",
+      "category": "water",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 20
+    },
+    {
+      "text": "Sanofi monitors emissions into water (COD, phosphates, etc.) at all manufacturing sites, in line with applicable local regulations.",
+      "category": "water",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 40
+    },
+    {
+      "text": "All relevant manufacturing sites monitor compliance with the water emissions limits set in their respective operating permits.",
+      "category": "water",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 40
+    },
+    {
+      "text": "Sanofi continuously strives to reduce the impact of its emissions on water bodies by implementing programs to limit the presence of contaminants in wastewater discharged by its manufacturing activities.",
+      "category": "water",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 40
+    },
+    {
+      "text": "Total organic carbon (TOC) (as COD/3) 1,204",
+      "category": "water",
+      "target_year": null,
+      "is_quantitative": true,
+      "source_page": 44
+    },
+    {
+      "text": "Dichloromethane (mass balance) 0.016",
+      "category": "water",
+      "target_year": null,
+      "is_quantitative": true,
+      "source_page": 44
+    }
+  ],
+  "water_stress_disclosed": true,
+  "forest_risk_commodities_mentioned": [
+    "cattle derivatives",
+    "palm oil derivatives",
+    "pig derivates"
+  ],
+  "supply_chain_claims": [
+    {
+      "text": "As part of Planet Care, Sanofi’s global environmental sustainability program, Sanofi sets targets across the whole value chain, to be reached by 2030 and 2045.",
+      "category": "supply_chain",
+      "target_year": 2030,
+      "is_quantitative": false,
+      "source_page": 8
+    },
+    {
+      "text": "Sanofi engages with its value chain partners, suppliers and contractors to adopt environmental policies in line with its ambitions.",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 21
+    },
+    {
+      "text": "Sanofi has developed a transition plan, which includes decarbonization levers, as well as a Supplier Engagement Program",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 21
+    },
+    {
+      "text": "Our Scope 3 emissions account for most of our GHG emissions (77%), with a high proportion from the upstream categories of Scope 3 linked to suppliers.",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": true,
+      "source_page": 30
+    },
+    {
+      "text": "In 2025, we reduced our Scope 3 emissions by 14% versus the 2019 baseline.",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": true,
+      "source_page": 30
+    },
+    {
+      "text": "In 2025, 130 suppliers engaged in the Supplier Engagement Program, covering 60% of supplier-related emissions and representing 50% of our procurement spend.",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": true,
+      "source_page": 33
+    },
+    {
+      "text": "82% of suppliers creating potential HSE risks removed between 2020 and end of 2025",
+      "category": "supply_chain",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 78
+    },
+    {
+      "text": "Our focus on responsible procurement is underpinned by our Supplier Code of Conduct to which all of our suppliers — and their respective suppliers — are required to agree as part of their onboarding.",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 80
+    },
+    {
+      "text": "Sanofi has an internal Third-Party Risk Management Structure to align our suppliers with our values, assess supplier risk at onboarding, and monitor risks associated with key suppliers.",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 80
+    },
+    {
+      "text": "Our annual service level target is 98%.",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": true,
+      "source_page": 95
+    }
+  ],
+  "top_sustainability_claims": [
+    {
+      "text": "To mitigate climate change, we aim for Net Zero GHG emissions in 2045, with intermediate targets in 2030.",
+      "category": "climate",
+      "target_year": 2045,
+      "is_quantitative": true,
+      "source_page": 20
+    },
+    {
+      "text": "Limiting our impact on nature through sustainable resources use and circularity",
+      "category": "other",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 20
+    },
+    {
+      "text": "We are supporting sustainable and equitable access to healthcare by building access to care programs in therapeutic areas such as respiratory and diabetes",
+      "category": "other",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 9
+    },
+    {
+      "text": "We are contributing to the delivery of care transformation through coordinated and collective efforts that reduce healthcare systems' environmental footprint and improve their resilience.",
+      "category": "other",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 9
+    },
+    {
+      "text": "82% of suppliers creating potential HSE risks removed between 2020 and end of 2025",
+      "category": "supply_chain",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 78
+    }
+  ],
+  "document_summary": "The document presents Sanofi's 2025 Sustainability Statement, detailing its environmental, social, and governance (ESG) performance and commitments, particularly under the EU Corporate Sustainability Reporting Directive (CSRD). Key themes include ambitious climate targets for Net Zero by 2045, efforts to reduce environmental impact across its value chain, and robust social initiatives focusing on human rights, fair labor practices, and patient safety. It highlights Sanofi's updated sustainability strategy, AIR (Access to Healthcare, Environmental Impact, Resilience in Healthcare Systems), and its structured governance for ESG matters.",
+  "extraction_confidence": "high",
+  "extraction_notes": "Biodiversity target year is not explicitly quantitative with a year, but general ambitions and action plans are provided. Water stress is disclosed as a potential future impact in climate scenarios, rather than a direct disclosure of current exposure or a specific target. The SBTi status is 'committed' as the company is currently resubmitting its validated targets due to a change in scope."
+}

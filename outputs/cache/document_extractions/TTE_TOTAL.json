@@ -1,0 +1,181 @@
+{
+  "company_id": "TTE_TOTAL",
+  "company_name": "TotalEnergies",
+  "document_path": "data/documents/totalenergies_sustainability_2025.pdf",
+  "document_year": 2024,
+  "extraction_date": "2026-05-16T11:07:33.541780",
+  "biodiversity_commitments": [
+    {
+      "text": "In 2022, we integrated a \"zero net deforestation\" target for each of our projects located in new locations.",
+      "category": "biodiversity",
+      "target_year": null,
+      "is_quantitative": true,
+      "source_page": 86
+    },
+    {
+      "text": "all of our 77 industrial environmentally material sites now have a biodiversity action plan currently being deployed, in line with our 2025 objective.",
+      "category": "biodiversity",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 87
+    },
+    {
+      "text": "The Tilenga project (Uganda) initiated an exchange program with Anglo American at the Venetia Limpopo Nature Reserve (South Africa), involving the Ugandan authorities and with the support of South African National Parks. [aims] to achieve a net gain for biodiversity",
+      "category": "biodiversity",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 87
+    }
+  ],
+  "tnfd_adopter": true,
+  "no_deforestation_pledge": true,
+  "biodiversity_target_year": 2025,
+  "climate_targets": [
+    {
+      "text": "reducing net Scope 1+2 emissions from our operated activities by 40% by 2030 relative to 2015",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 46
+    },
+    {
+      "text": "reducing its operated methane emissions by 80% in 2030, compared with 2020",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 50
+    },
+    {
+      "text": "25% reduction in the lifecycle carbon intensity of our sales by 2030 compared to 2015",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 17
+    },
+    {
+      "text": "produce more than 50 TWh of electricity by 2025, i.e. 10% of our production of hydrocarbon, on the way to reaching 20% by 2030.",
+      "category": "climate",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 6
+    },
+    {
+      "text": "increase our energy production (oil, gas and electricity), overall by 4% per year between 2024 and 2030.",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 17
+    },
+    {
+      "text": "Our 2025 emissions reductions targets have been strengthened: Methane: from -50% to -60% (vs 2020)... Scope 1+2 of our operated sites: from less than 38 Mt to less than 37 Mt CO2e; Carbon intensity of energy products sold: from -15 % to -17%",
+      "category": "climate",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 4
+    }
+  ],
+  "net_zero_year": 2050,
+  "sbti_status": "unknown",
+  "water_disclosures": [
+    {
+      "text": "Our target is to reduce our overall freshwater withdrawals by 20% at sites located in water-stressed zones in 2030 compared to 2021.",
+      "category": "water",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 83
+    },
+    {
+      "text": "La Mède biorafinery plans to save 300,000 m³ of water per year thanks to the installation of a variable flow pump, i.e. 13% of its annual withdrawal",
+      "category": "water",
+      "target_year": null,
+      "is_quantitative": true,
+      "source_page": 83
+    },
+    {
+      "text": "The CCGT of Castejon has equipped itself with flow meters to refine its water balance in 2024 and has validated the installation of a pilot to test advanced treatment technology for water to be recycled. The results of this pilot are expected in 2025.",
+      "category": "water",
+      "target_year": 2025,
+      "is_quantitative": false,
+      "source_page": 83
+    },
+    {
+      "text": "the Company set itself a 2030 target for the quality of water discharged from our onshore sites. This new target devides by 15 the maximum hydrocarbon content of discharded water compared with the previous Company objective.",
+      "category": "water",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 81
+    }
+  ],
+  "water_stress_disclosed": true,
+  "forest_risk_commodities_mentioned": [],
+  "supply_chain_claims": [
+    {
+      "text": "the Company has set itself the target of assessing its 1,300 priority suppliers on all aspects of sustainable development by the end of 2025.",
+      "category": "supply_chain",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 100
+    },
+    {
+      "text": "65% of buyers trained in responsible purchasing in 2024.",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": true,
+      "source_page": 38
+    },
+    {
+      "text": "Evaluate our 1,300 priority suppliers by the end of 2025.",
+      "category": "supply_chain",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 38
+    },
+    {
+      "text": "In 2024, it strengthened its supplier climate commitment program and brought together 300 suppliers for an awareness-raising webinar.",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": true,
+      "source_page": 100
+    }
+  ],
+  "top_sustainability_claims": [
+    {
+      "text": "More Energy, Less Emissions",
+      "category": "other",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 1
+    },
+    {
+      "text": "Ambition of carbon neutrality by 2050, together with society",
+      "category": "climate",
+      "target_year": 2050,
+      "is_quantitative": false,
+      "source_page": 2
+    },
+    {
+      "text": "To provide as many people as possible with energy that is more reliable, more affordable and more sustainable.",
+      "category": "other",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 2
+    },
+    {
+      "text": "continue to produce the energy the world needs today while reducing our industrial emissions, and in particular moving towards zero methane emissions by 2030.",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": false,
+      "source_page": 5
+    },
+    {
+      "text": "build the low-carbon energy system of tomorrow, planning to produce more than 50 TWh of electricity by 2025 and reaching 20% of our hydrocarbon production by 2030.",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 6
+    }
+  ],
+  "document_summary": "TotalEnergies' 2024 Sustainability & Climate Progress Report outlines the company's strategy to deliver 'More Energy, Less Emissions', aiming for carbon neutrality by 2050. It details efforts to reduce GHG and methane emissions from operations, expand renewable electricity generation, and promote sustainable fuels. The report also covers social initiatives, including commitments to human rights, employee well-being, and positive stakeholder impact.",
+  "extraction_confidence": "high",
+  "extraction_notes": "The document is well-structured and provides explicit information for most requested fields."
+}

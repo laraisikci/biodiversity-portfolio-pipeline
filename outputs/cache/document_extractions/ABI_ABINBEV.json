@@ -1,0 +1,144 @@
+{
+  "company_id": "ABI_ABINBEV",
+  "company_name": "AB InBev",
+  "document_path": "data/documents/abinbev_sustainability_2025.pdf",
+  "document_year": 2025,
+  "extraction_date": "2026-05-16T11:11:04.616598",
+  "biodiversity_commitments": [
+    {
+      "text": "AB InBev depends on high-quality agricultural crops and water from healthy natural ecosystems to brew its beers and it strives to protect and restore biodiversity through its work in watersheds and agriculture.",
+      "category": "biodiversity",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 179
+    },
+    {
+      "text": "The company aims to identify how to minimize its impact on nature while exploring opportunities to invest in nature-based solutions in agriculture and watershed restoration and conservation.",
+      "category": "biodiversity",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 179
+    }
+  ],
+  "tnfd_adopter": false,
+  "no_deforestation_pledge": false,
+  "biodiversity_target_year": null,
+  "climate_targets": [
+    {
+      "text": "The company’s ambition to achieve net zero across its value chain by 2040.",
+      "category": "climate",
+      "target_year": 2040,
+      "is_quantitative": false,
+      "source_page": 172
+    },
+    {
+      "text": "reduce our CO2 emissions by 25% across our value chain by 2025.",
+      "category": "climate",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 174
+    },
+    {
+      "text": "purchase 100% of its electricity from renewable sources by 2025.",
+      "category": "climate",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 174
+    },
+    {
+      "text": "reduce absolute Scopes 1 and 2 GHG emissions by 35% by 2025 from a 2017 baseline",
+      "category": "climate",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 174
+    }
+  ],
+  "net_zero_year": 2040,
+  "sbti_status": "validated",
+  "water_disclosures": [
+    {
+      "text": "100% of our communities in high-stress areas will have measurably improved water availability and quality by 2025.",
+      "category": "water",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 171
+    },
+    {
+      "text": "achieve an average water use efficiency ratio of 2.5 hectoliter/hectoliter (hl/hl) across its breweries globally by 2025",
+      "category": "water",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 171
+    },
+    {
+      "text": "achieve a water use efficiency ratio of 2.0 hl/hl for its breweries across the 36 high-stress sites in scope of its 2025 Water Stewardship Goal.",
+      "category": "water",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 171
+    }
+  ],
+  "water_stress_disclosed": true,
+  "forest_risk_commodities_mentioned": [
+    "barley",
+    "hops",
+    "corn",
+    "rice"
+  ],
+  "supply_chain_claims": [
+    {
+      "text": "In sustainable agriculture, 100% of our direct farmers met our criteria for being skilled, connected and financially empowered.",
+      "category": "supply_chain",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 8
+    },
+    {
+      "text": "100% of our products will be in packaging that is returnable or made from majority recycled content.",
+      "category": "supply_chain",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 44
+    }
+  ],
+  "top_sustainability_claims": [
+    {
+      "text": "The company’s ambition to achieve net zero across its value chain by 2040.",
+      "category": "climate",
+      "target_year": 2040,
+      "is_quantitative": false,
+      "source_page": 172
+    },
+    {
+      "text": "In 2025, the company achieved its emission reduction goal by reducing its absolute emissions in Scopes 1 and 2 by 44.4% and its Scopes 1, 2 and 3 emissions per hectoliter of production by 31.9% against a 2017 baseline.",
+      "category": "climate",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 174
+    },
+    {
+      "text": "In 2025, the goal [100% of its communities in high-stress areas will have measurably improved water availability and quality by 2025] was achieved with all 36 sites recording measurable improvement in water availability.",
+      "category": "water",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 171
+    },
+    {
+      "text": "In 2025, 100% of our direct farmers were skilled, connected, and financially empowered.",
+      "category": "supply_chain",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 179
+    },
+    {
+      "text": "Over the past decade, we have invested more than 1 billion USD to promote responsible consumption – from initiatives to improve road safety in 34 countries, to training more than 200,000 staff in responsible beverage service- we are actively working to reduce harmful drinking.",
+      "category": "other",
+      "target_year": null,
+      "is_quantitative": true,
+      "source_page": 32
+    }
+  ],
+  "document_summary": "This 2025 Annual Report details AB InBev's strong financial performance, including $59.3 billion in net revenue and $11.3 billion in free cash flow, alongside significant progress in digital transformation through platforms like BEES. The company highlights achievements against its 2025 sustainability goals in climate action, water stewardship, and smart agriculture, while also committing to net-zero emissions by 2040.",
+  "extraction_confidence": "high",
+  "extraction_notes": "The document is an annual report for \"2025\" and details achievements and some shortfalls against targets set *for* 2025, as well as future ambitions. Its core business activities are explicitly stated as not being covered by the EU Taxonomy Regulation. It uses the TCFD framework for climate risk assessment but does not explicitly adopt the TNFD framework. Biodiversity targets are qualitative rather than quantitative."
+}

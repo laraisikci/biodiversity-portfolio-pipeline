@@ -1,0 +1,204 @@
+{
+  "company_id": "IBE_IBERDROLA",
+  "company_name": "IBERDROLA, S.A.",
+  "document_path": "data/documents/iberdrola_sustainability_2025.pdf",
+  "document_year": 2025,
+  "extraction_date": "2026-05-16T10:56:04.572917",
+  "biodiversity_commitments": [
+    {
+      "text": "achieving a net positive impact on biodiversity by 2030.",
+      "category": "biodiversity",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 60
+    },
+    {
+      "text": "The Plan also endorses the principle of no net deforestation, promoting it among key suppliers through awareness-raising initiatives.",
+      "category": "biodiversity",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 60
+    },
+    {
+      "text": "Number of facilities aligned with a biodiversity plan: ~700 (by 2030e)",
+      "category": "biodiversity",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 69
+    }
+  ],
+  "tnfd_adopter": true,
+  "no_deforestation_pledge": true,
+  "biodiversity_target_year": 2030,
+  "climate_targets": [
+    {
+      "text": "reduce the emissions intensity of electricity generation to 32 g CO2/kWh in a normal rainfall period by 2028",
+      "category": "climate",
+      "target_year": 2028,
+      "is_quantitative": true,
+      "source_page": 34
+    },
+    {
+      "text": "achieve CO2eq neutrality for Scope 1 by 2030, with a target figure of less than 10 g CO2/kWh in intensity from electricity generation emissions that year",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 34
+    },
+    {
+      "text": "achieve Net Zero emissions in all scopes (1, 2 and 3) by 2040",
+      "category": "climate",
+      "target_year": 2040,
+      "is_quantitative": false,
+      "source_page": 34
+    },
+    {
+      "text": "Comply SBTI milestone in 2030 & 2040",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": false,
+      "source_page": 45
+    },
+    {
+      "text": "Managed Stored Energy Capacity: >11,000 GWh / year (by 2030e)",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 45
+    },
+    {
+      "text": "Smart Grids: ~90% asset automation (by 2028e)",
+      "category": "climate",
+      "target_year": 2028,
+      "is_quantitative": true,
+      "source_page": 45
+    },
+    {
+      "text": "CAPEX aligned: ~90% Taxonomy Aligned CapEx (by 2028e)",
+      "category": "climate",
+      "target_year": 2028,
+      "is_quantitative": true,
+      "source_page": 45
+    },
+    {
+      "text": "Green Financing: >30,000 Million Euros (cumulative) (by 2028e)",
+      "category": "climate",
+      "target_year": 2028,
+      "is_quantitative": true,
+      "source_page": 45
+    }
+  ],
+  "net_zero_year": 2040,
+  "sbti_status": "validated",
+  "water_disclosures": [
+    {
+      "text": "Reduction of water intensity in energy production (% (reduction vs 2025) in m3/MWh: -40% by 2030e)",
+      "category": "water",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 57
+    },
+    {
+      "text": "Total water consumption in water stress areas - Continuing activities: 41,912,946 m3 (2025)",
+      "category": "water",
+      "target_year": null,
+      "is_quantitative": true,
+      "source_page": 58
+    },
+    {
+      "text": "100 % Of total water withdrawn is used in cooling processes.",
+      "category": "water",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 58
+    }
+  ],
+  "water_stress_disclosed": true,
+  "forest_risk_commodities_mentioned": [
+    "timber"
+  ],
+  "supply_chain_claims": [
+    {
+      "text": "in its supplier code of conduct, Iberdrola establishes the commitment to prevent deforestation, ensuring that the products supplied do not cause deforestation or loss of biodiversity and guaranteeing the conservation of land and water resources in those environments in which it operates or has the capacity to exert influence.",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 64
+    },
+    {
+      "text": "The Company has set a blade and panel recycling target of more than 90% by 2030.",
+      "category": "supply_chain",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 72
+    },
+    {
+      "text": "Number of suppliers subject to sustainable development policies and standards at the end of 2025 with a weight of 10%.",
+      "category": "supply_chain",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 21
+    },
+    {
+      "text": "The Group promotes actions that have a positive impact on workers in the value chain by encouraging labour welfare and socio-economic development through the creation of direct and indirect employment, the revitalisation of rural areas, fiscal contributions, and professional training linked to the green economy.",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 102
+    },
+    {
+      "text": "The Company implements measures to prevent and mitigate negative impacts on these workers through due diligence processes including the prohibition of child and forced labour, promotion of decent work, freedom of association, collective bargaining, equality and non-discrimination.",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 103
+    },
+    {
+      "text": "The sustainability goal for suppliers of the Iberdrola Group has been redefined in 2025, establishing a target for the period 2025-2028 based on the total amount awarded to sustainable suppliers, with the goal of exceeding EUR 50,000 million in that period.",
+      "category": "supply_chain",
+      "target_year": 2028,
+      "is_quantitative": true,
+      "source_page": 121
+    }
+  ],
+  "top_sustainability_claims": [
+    {
+      "text": "Boosting electricity as a self-sufficient, competitive and local energy source",
+      "category": "climate",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 23
+    },
+    {
+      "text": "Strengthening human and social capital",
+      "category": "other",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 23
+    },
+    {
+      "text": "Promoting good governance in accordance with the Group's Ethical and Basic Principles and applicable rules and regulations",
+      "category": "other",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 23
+    },
+    {
+      "text": "Protecting nature and promoting the efficient use of resources",
+      "category": "biodiversity",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 23
+    },
+    {
+      "text": "Promoting a sustainable value chain",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 23
+    }
+  ],
+  "document_summary": "The Iberdrola 2025 Consolidated Non-Financial Information Statement and Sustainability Report details the company's performance, impacts, risks, and opportunities across environmental, social, and governance (ESG) areas, aligned with ESRS and EU Taxonomy. Key themes include achieving Net Zero emissions by 2040 with SBTi-validated targets, enhancing biodiversity with a net positive impact by 2030, and implementing robust due diligence processes across its value chain and workforce. The report emphasizes sustainable investments, stakeholder engagement, and responsible business conduct as integral to its strategy.",
+  "extraction_confidence": "high",
+  "extraction_notes": "The document is highly structured and detailed, adhering to ESRS and EU Taxonomy reporting requirements. It provides extensive quantitative data and clear targets across environmental and social pillars. The explicit alignment with TNFD and SBTi is clearly stated. Information on forest-risk commodities is limited to 'materials containing wood'."
+}

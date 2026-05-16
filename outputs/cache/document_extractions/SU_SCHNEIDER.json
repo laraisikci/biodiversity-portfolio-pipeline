@@ -1,0 +1,138 @@
+{
+  "company_id": "SU_SCHNEIDER",
+  "company_name": "Schneider Electric",
+  "document_path": "data/documents/schneider_sustainability_2025.pdf",
+  "document_year": 2025,
+  "extraction_date": "2026-05-16T10:56:48.852779",
+  "biodiversity_commitments": [
+    {
+      "text": "100% of Schneider Electric sites adopted local biodiversity conservation and restoration programs, meeting the Group's 2025 ambition",
+      "category": "biodiversity",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 6
+    }
+  ],
+  "tnfd_adopter": false,
+  "no_deforestation_pledge": false,
+  "biodiversity_target_year": 2025,
+  "climate_targets": [
+    {
+      "text": "Act for a climate-positive world by continuously investing in and developing innovative solutions that deliver immediate and lasting decarbonization in line with our Net-Zero Commitment",
+      "category": "climate",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 3
+    },
+    {
+      "text": "Grow Schneider Impact revenues",
+      "category": "climate",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 4
+    },
+    {
+      "text": "Help our customers save and avoid millions of tonnes of CO2 emissions",
+      "category": "climate",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 4
+    },
+    {
+      "text": "Reduce CO2 emissions from top 1,000 suppliers' operations",
+      "category": "climate",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 4
+    }
+  ],
+  "net_zero_year": null,
+  "sbti_status": "none",
+  "water_disclosures": [],
+  "water_stress_disclosed": false,
+  "forest_risk_commodities_mentioned": [],
+  "supply_chain_claims": [
+    {
+      "text": "Reduce CO2 emissions from top 1,000 suppliers' operations",
+      "category": "supply_chain",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 4
+    },
+    {
+      "text": "Strategic suppliers who provide decent work to their employees",
+      "category": "supply_chain",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 4
+    },
+    {
+      "text": "\"Partnering for Sustainability\", Schneider Electric's global initiative to empower SMEs in their decarbonization journey, has been recognized by the SB COP30 Awards",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 5
+    },
+    {
+      "text": "SE Advisory Services, partners with Marks & Spencer to support the deployment of their new supply chain decarbonization program",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 5
+    },
+    {
+      "text": "Schneider Electric ranked #1 in the prestigious Gartner Top 25 Supply Chain 2025 after 10 consecutive years on the list",
+      "category": "supply_chain",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 6
+    },
+    {
+      "text": "98% of Schneider's strategic suppliers conform with Schneider's Decent Work requirements since the program's launch in 2021, ensuring dignity and protecting workers' rights",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": true,
+      "source_page": 7
+    }
+  ],
+  "top_sustainability_claims": [
+    {
+      "text": "Making Impact as the #1 most sustainable company",
+      "category": "other",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 2
+    },
+    {
+      "text": "862M tonnes of CO2 emissions saved and avoided for our customers thanks to our solutions and services, surpassing the 2025 ambition of 800 Mt",
+      "category": "climate",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 5
+    },
+    {
+      "text": "98% of Schneider's strategic suppliers conform with Schneider's Decent Work requirements since the program's launch in 2021, ensuring dignity and protecting workers' rights",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": true,
+      "source_page": 7
+    },
+    {
+      "text": "60M+ million people were provided with access to clean and reliable electricity since 2009",
+      "category": "other",
+      "target_year": null,
+      "is_quantitative": true,
+      "source_page": 8
+    },
+    {
+      "text": "1M+ people empowered with energy management skills worldwide since 2009",
+      "category": "other",
+      "target_year": null,
+      "is_quantitative": true,
+      "source_page": 9
+    }
+  ],
+  "document_summary": "The document presents Schneider Electric's Q4 2025 sustainability performance against its 6 long-term commitments, highlighting significant achievements in climate action (e.g., 862M tonnes CO2 avoided), supply chain ethics, and social impact (e.g., access to green electricity, energy management training). It emphasizes the company's recognition as a top sustainable company globally, reporting quantitative progress against various 2025 targets.",
+  "extraction_confidence": "high",
+  "extraction_notes": "The document is a Q4 report, focusing heavily on KPI achievements against 2025 targets. A specific long-term net-zero year is not explicitly stated, though a 'Net-Zero Commitment' is mentioned. Biodiversity and water targets are less detailed than climate or social metrics. No explicit adoption of TNFD or SBTi validation status is mentioned."
+}

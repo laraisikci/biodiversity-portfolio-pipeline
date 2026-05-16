@@ -1,0 +1,210 @@
+{
+  "company_id": "ASML_ASML",
+  "company_name": "ASML",
+  "document_path": "data/documents/asml_sustainability_2025.pdf",
+  "document_year": 2025,
+  "extraction_date": "2026-05-16T10:59:20.339136",
+  "biodiversity_commitments": [],
+  "tnfd_adopter": false,
+  "no_deforestation_pledge": false,
+  "biodiversity_target_year": null,
+  "climate_targets": [
+    {
+      "text": "We aim to be greenhouse gas neutral across our value chain by 2040.",
+      "category": "climate",
+      "target_year": 2040,
+      "is_quantitative": true,
+      "source_page": 155
+    },
+    {
+      "text": "Become GHG neutral for scope 1 and 2 emissions, and scope 3 emissions from business travel and commuting by 2025.",
+      "category": "climate",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 156
+    },
+    {
+      "text": "Become GHG neutral for scope 3 emissions from supply chain by 2030.",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 156
+    },
+    {
+      "text": "Become GHG neutral for scope 3 emissions from product use by 2040.",
+      "category": "climate",
+      "target_year": 2040,
+      "is_quantitative": true,
+      "source_page": 156
+    },
+    {
+      "text": "Reduce absolute gross scope 1 and 2 GHG emissions by 25.2% by 2025",
+      "category": "climate",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 160
+    },
+    {
+      "text": "Reduce absolute gross scope 1 and 2 GHG emissions by 75% by 2030",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 160
+    },
+    {
+      "text": "Reduce absolute gross scope 1 and 2 GHG emissions by 90% by 2040",
+      "category": "climate",
+      "target_year": 2040,
+      "is_quantitative": true,
+      "source_page": 160
+    },
+    {
+      "text": "Reduce scope 3 GHG emissions per €m gross profit by 35.3% by 2025",
+      "category": "climate",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 160
+    },
+    {
+      "text": "Reduce scope 3 GHG emissions per €m gross profit by 55% by 2030",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 160
+    },
+    {
+      "text": "Reduce scope 3 GHG emissions per €m gross profit by 97% by 2040",
+      "category": "climate",
+      "target_year": 2040,
+      "is_quantitative": true,
+      "source_page": 160
+    },
+    {
+      "text": "Commitment from top-80% suppliers (based on CO2e emissions) to reduce their CO2e footprint by 2030 32% (2026 target: 75%)",
+      "category": "climate",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 153
+    },
+    {
+      "text": "NXE energy use per wafer pass (NXE:3800E, measured in 2025) 5.5 kWh (2025 target: 5.1kWh)",
+      "category": "climate",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 153
+    }
+  ],
+  "net_zero_year": 2040,
+  "sbti_status": "validated",
+  "water_disclosures": [
+    {
+      "text": "In 2025, our total water consumption was 507,740 m3.",
+      "category": "water",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 208
+    },
+    {
+      "text": "Total recycled and reused 7 (in 1,000 m3) in 2025",
+      "category": "water",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 208
+    },
+    {
+      "text": "Water intensity: Total water consumption in our own operations per revenue (in m3/€m revenue) 16 in 2025",
+      "category": "water",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 208
+    },
+    {
+      "text": "We monitor and evaluate our water management and water consumption trend quarterly, but have no target for water management in our own operations.",
+      "category": "water",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 208
+    },
+    {
+      "text": "We remain committed to continuously improving water efficiency by expanding closed-loop cooling systems and increasing the reuse of ultrapure water in our operations.",
+      "category": "water",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 208
+    }
+  ],
+  "water_stress_disclosed": true,
+  "forest_risk_commodities_mentioned": [
+    "wood"
+  ],
+  "supply_chain_claims": [
+    {
+      "text": "Responsible Business Alliance (RBA) self-assessment completed (in %) 90% (2025 target: 90%)",
+      "category": "supply_chain",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 236
+    },
+    {
+      "text": "Suppliers with overall high risk evaluated and follow-up agreed (in %) 100% (2025 target: 100%)",
+      "category": "supply_chain",
+      "target_year": 2025,
+      "is_quantitative": true,
+      "source_page": 236
+    },
+    {
+      "text": "Our Responsible Value Chain Policy outlines our commitments, principles and requirements for managing environmental and human rights risks and impacts across our value chain.",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 238
+    },
+    {
+      "text": "As a member of the RBA, we have adopted its Code of Conduct – a set of standards relating to labor (human rights of all workers), health and safety, environment and ethics. We expect our suppliers to comply, too, and to cascade this requirement to their own suppliers.",
+      "category": "supply_chain",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 238
+    }
+  ],
+  "top_sustainability_claims": [
+    {
+      "text": "Powering technology forward while aiming to reduce environmental impact.",
+      "category": "other",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 39
+    },
+    {
+      "text": "Our ESG sustainability strategy is based on the topics significant to our organization.",
+      "category": "other",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 145
+    },
+    {
+      "text": "We aim to be greenhouse gas neutral across our value chain by 2040.",
+      "category": "climate",
+      "target_year": 2040,
+      "is_quantitative": true,
+      "source_page": 155
+    },
+    {
+      "text": "We aim to have zero waste from our operations to landfill and incineration by 2030.",
+      "category": "other",
+      "target_year": 2030,
+      "is_quantitative": true,
+      "source_page": 187
+    },
+    {
+      "text": "ASML’s ambition is to be seen as a top performer in ESG sustainability by its stakeholders.",
+      "category": "other",
+      "target_year": null,
+      "is_quantitative": false,
+      "source_page": 263
+    }
+  ],
+  "document_summary": "The ASML 2025 Annual Report highlights the company's commitment to powering technology forward sustainably. Key themes include achieving GHG neutrality across its value chain by 2040, aiming for zero waste from operations by 2030, and fostering responsible supply chain practices with 100% high-risk supplier follow-up. The report also emphasizes ASML's role in the global semiconductor ecosystem through innovation and collaboration, while detailing its ESG sustainability strategy and financial performance.",
+  "extraction_confidence": "high",
+  "extraction_notes": "The document explicitly states that biodiversity and ecosystems are \"Not a material topic based on the outcome of our DMA\", therefore no specific targets for biodiversity are set or disclosed."
+}
