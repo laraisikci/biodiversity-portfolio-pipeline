@@ -49,3 +49,8 @@ Thumbs.db
 !data/documents/README.md
 !outputs/logs/.gitkeep
 anaconda_projects/
+# Additional secret-file patterns (defense-in-depth)
+.env*
+*.pem
+*.key
+secrets/
