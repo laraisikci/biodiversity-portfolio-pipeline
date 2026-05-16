@@ -90,7 +90,15 @@ class GreenwashingFlag(BaseModel):
     signal_transition_capex_gap: bool = Field(
         False, description="Claims transition leadership but carbon intensity >= sector median"
     )
-    signals_fired: int = Field(0, description="Count of signals triggered (0-6)")
+    signal_vague_leadership_claim: bool = Field(
+        False,
+        description=(
+            "Slide 27 pattern: aspirational leadership language ('leader', '#1', "
+            "'most sustainable') without underlying commitment infrastructure "
+            "(no SBTi validation, no quantitative biodiversity targets)"
+        ),
+    )
+    signals_fired: int = Field(0, description="Count of signals triggered (0-7)")
 
     # === Calibrated probability from Logistic Regression ===
     greenwashing_probability: DataPoint = Field(

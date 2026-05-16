@@ -35,6 +35,8 @@ def _make_extraction(
     forest_commodities=None,
     transition_claim_text: str = "",
     has_quantitative_supply_chain: bool = False,
+    has_quantitative_bio: bool = False,
+    top_claim_texts=None,
 ) -> DocumentExtraction:
     """Build a synthetic DocumentExtraction for testing."""
     top_claims = []
@@ -44,12 +46,28 @@ def _make_extraction(
             category="climate",
             is_quantitative=True,
         ))
+    if top_claim_texts:
+        for text in top_claim_texts:
+            top_claims.append(ExtractedClaim(
+                text=text,
+                category="other",
+                is_quantitative=False,
+            ))
 
     supply_chain = []
     if has_quantitative_supply_chain:
         supply_chain.append(ExtractedClaim(
             text="Reduce X by 50% by 2030",
             category="supply_chain",
+            target_year=2030,
+            is_quantitative=True,
+        ))
+
+    bio_commitments = []
+    if has_quantitative_bio:
+        bio_commitments.append(ExtractedClaim(
+            text="Restore 50,000 hectares of biodiversity by 2030",
+            category="biodiversity",
             target_year=2030,
             is_quantitative=True,
         ))
@@ -67,7 +85,7 @@ def _make_extraction(
         forest_risk_commodities_mentioned=forest_commodities or [],
         top_sustainability_claims=top_claims,
         supply_chain_claims=supply_chain,
-        biodiversity_commitments=[],
+        biodiversity_commitments=bio_commitments,
         climate_targets=[],
         water_disclosures=[],
         document_summary="",
@@ -200,6 +218,70 @@ class TestSignalTransitionCapexGap:
         master_row = pd.Series({"co2IntensityPerSalesCalc": 500.0})
         agent = GreenwashingAgent()
         assert agent._signal_transition_capex_gap(ext, master_row, None) == 0
+
+
+class TestSignalVagueLeadershipClaim:
+    """Signal 7: Aspirational leadership language without underlying commitments.
+    
+    Slide 27 pattern: 'sustainability score' without specifics is bad variable.
+    The Schneider Electric case in our pipeline.
+    """
+
+    def test_fires_with_leadership_claim_and_no_sbti_no_bio(self):
+        """Classic Schneider pattern: '#1 most sustainable' but no SBTi, no quantitative bio."""
+        ext = _make_extraction(
+            sbti_status="none",
+            has_quantitative_bio=False,
+            top_claim_texts=["Making Impact as the #1 most sustainable company"],
+        )
+        agent = GreenwashingAgent()
+        assert agent._signal_vague_leadership_claim(ext) == 1
+
+    def test_does_not_fire_when_sbti_validated(self):
+        """Leadership claim backed by SBTi-validated targets is legitimate."""
+        ext = _make_extraction(
+            sbti_status="validated",
+            has_quantitative_bio=False,
+            top_claim_texts=["We are the industry leader in renewable energy"],
+        )
+        agent = GreenwashingAgent()
+        assert agent._signal_vague_leadership_claim(ext) == 0
+
+    def test_does_not_fire_when_quantitative_bio_present(self):
+        """Leadership + quantitative biodiversity commitments = legitimate."""
+        ext = _make_extraction(
+            sbti_status="committed",
+            has_quantitative_bio=True,
+            top_claim_texts=["We are pioneering nature-positive operations"],
+        )
+        agent = GreenwashingAgent()
+        assert agent._signal_vague_leadership_claim(ext) == 0
+
+    def test_does_not_fire_without_leadership_language(self):
+        """No leadership language = nothing to flag."""
+        ext = _make_extraction(
+            sbti_status="none",
+            top_claim_texts=["We aim to reduce emissions by 30% by 2030"],
+        )
+        agent = GreenwashingAgent()
+        assert agent._signal_vague_leadership_claim(ext) == 0
+
+    def test_does_not_fire_with_empty_claims(self):
+        """No top claims at all = nothing to flag."""
+        ext = _make_extraction(sbti_status="none")
+        agent = GreenwashingAgent()
+        assert agent._signal_vague_leadership_claim(ext) == 0
+
+    def test_committed_sbti_is_not_a_pass(self):
+        """SBTi 'committed' (not validated) does NOT exempt from signal 7."""
+        ext = _make_extraction(
+            sbti_status="committed",
+            has_quantitative_bio=False,
+            top_claim_texts=["Leading the transition to a low-carbon economy"],
+        )
+        agent = GreenwashingAgent()
+        # Strict interpretation: only "validated" exempts
+        assert agent._signal_vague_leadership_claim(ext) == 1
 
 
 # === Calibration classifier tests ===

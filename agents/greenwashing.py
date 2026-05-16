@@ -203,7 +203,7 @@ class GreenwashingAgent(BaseAgent):
 
         return flags
 
-    # === Signal computation (the 6 rules from slide 43) ===
+    # === Signal computation (the 6 rules from slide 43 + signal 7 from slide 27) ===
 
     def _compute_signals(
         self,
@@ -211,7 +211,11 @@ class GreenwashingAgent(BaseAgent):
         master_row: Optional[pd.Series],
         climate_metrics: Optional[Dict],
     ) -> Dict[str, int]:
-        """Compute the 6 deterministic signal features.
+        """Compute the deterministic signal features.
+
+        Signals 1-6 implement slide 43 red flags directly.
+        Signal 7 implements slide 27's "vague variable" warning: aspirational
+        leadership claims paired with absent process infrastructure.
 
         Each signal returns 1 (fired = potential greenwashing) or 0.
         """
@@ -222,6 +226,7 @@ class GreenwashingAgent(BaseAgent):
             "rating_divergence": self._signal_rating_divergence(master_row),
             "forest_commodity_gap": self._signal_forest_commodity_gap(extraction),
             "transition_capex_gap": self._signal_transition_capex_gap(extraction, master_row, climate_metrics),
+            "vague_leadership_claim": self._signal_vague_leadership_claim(extraction),
         }
         return signals
 
@@ -411,6 +416,61 @@ class GreenwashingAgent(BaseAgent):
         # AND company claims transition leadership, fire the signal
         return 1 if carbon_intensity > 100 else 0
 
+    def _signal_vague_leadership_claim(self, extraction: DocumentExtraction) -> int:
+        """Signal 7: Aspirational leadership claim without underlying commitment infrastructure.
+
+        Implements Lecture 5 slide 27's warning about "vague variables" and
+        slide 17's principle that "ESG integrated" claims require process evidence.
+
+        Fires when ALL of:
+          1. Company makes leadership-style claims in top sustainability claims
+             (matches words like 'leader', 'leading', '#1', 'most sustainable',
+             'pioneering', 'best-in-class')
+          2. AND has no SBTi-validated targets
+          3. AND has no quantitative biodiversity commitments
+
+        Rationale: A company can legitimately claim sustainability leadership
+        if backed by SBTi validation + specific bio targets. The signal catches
+        marketing language paired with absent process infrastructure.
+
+        Example: Schneider Electric — claims "#1 most sustainable company"
+        but has no SBTi, no net-zero year, no TNFD, no quantitative bio target.
+        """
+        # Step 1: Check for leadership-style language in claims
+        leadership_terms = [
+            "leader", "leading", "#1", "number one", "most sustainable",
+            "pioneering", "pioneer", "best-in-class", "best in class",
+            "first to", "industry-leading", "industry leading",
+        ]
+        claims_to_search = (
+            extraction.top_sustainability_claims
+            + extraction.climate_targets
+            + extraction.biodiversity_commitments
+        )
+        has_leadership_claim = any(
+            any(term in (c.text or "").lower() for term in leadership_terms)
+            for c in claims_to_search
+        )
+        if not has_leadership_claim:
+            return 0
+
+        # Step 2: Check for SBTi validation
+        has_sbti_validation = extraction.sbti_status == "validated"
+        if has_sbti_validation:
+            # Leadership claim is backed by validated targets — not greenwashing
+            return 0
+
+        # Step 3: Check for quantitative biodiversity commitments
+        has_quantitative_bio = any(
+            c.is_quantitative for c in extraction.biodiversity_commitments
+        )
+        if has_quantitative_bio:
+            # Leadership claim backed by specific bio commitments — not greenwashing
+            return 0
+
+        # All conditions met: leadership language + no SBTi + no quant bio = signal fires
+        return 1
+
     # === Calibration via Logistic Regression ===
 
     def _train_calibration_classifier(self):
@@ -542,6 +602,11 @@ class GreenwashingAgent(BaseAgent):
                 "Taxonomy alignment claimed in a sector where DNSH/alignment "
                 "evidence is typically incomplete"
             )
+        if signals["vague_leadership_claim"]:
+            inconsistencies.append(
+                "Sustainability leadership language used (e.g. 'leader', '#1 most sustainable') "
+                "without SBTi-validated targets or quantitative biodiversity commitments"
+            )
 
         return GreenwashingFlag(
             company_id=extraction.company_id,
@@ -553,6 +618,7 @@ class GreenwashingAgent(BaseAgent):
             signal_rating_divergence=bool(signals["rating_divergence"]),
             signal_forest_commodity_gap=bool(signals["forest_commodity_gap"]),
             signal_transition_capex_gap=bool(signals["transition_capex_gap"]),
+            signal_vague_leadership_claim=bool(signals["vague_leadership_claim"]),
             signals_fired=signals_fired,
             # Probability
             greenwashing_probability=DataPoint(
@@ -562,7 +628,7 @@ class GreenwashingAgent(BaseAgent):
                 source="Logistic Regression calibration",
                 extraction_method="Agent 8 (Greenwashing)",
                 notes=(
-                    f"{signals_fired}/6 signals fired. Calibrated via LogReg "
+                    f"{signals_fired}/7 signals fired. Calibrated via LogReg "
                     f"on 12 reference cases (mix of regulatory findings and clean cases)."
                 ),
             ),
