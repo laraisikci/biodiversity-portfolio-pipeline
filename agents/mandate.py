@@ -54,6 +54,15 @@ class Mandate(BaseModel):
     # Risk constraints
     max_single_name_weight: float = Field(..., ge=0, le=1, description="e.g. 0.08 for 8%")
     max_sector_weight: float = Field(..., ge=0, le=1, description="e.g. 0.20 for 20%")
+    max_holdings_per_sector: int = Field(
+        default=4,
+        ge=1,
+        description=(
+            "Maximum number of holdings per BICS Level 1 sector at the "
+            "selection stage. Derived from max_sector_weight at equal weighting: "
+            "max_sector_weight / per_holding_weight."
+        ),
+    )
     min_sector_count: int = Field(5, description="Minimum sectors represented")
     carbon_intensity_cap_vs_benchmark: float = Field(
         ..., description="e.g. 0.8 = 80% of benchmark carbon intensity"
@@ -142,6 +151,7 @@ class MandateAgent(BaseAgent):
             ],
             "max_single_name_weight": 0.08,
             "max_sector_weight": 0.20,
+            "max_holdings_per_sector": 4,
             "min_sector_count": 5,
             "carbon_intensity_cap_vs_benchmark": 0.80,
             "sector_exclusions": [
@@ -171,6 +181,7 @@ class MandateAgent(BaseAgent):
                 "benchmark": mandate.benchmark_name,
                 "max_single_name": mandate.max_single_name_weight,
                 "max_sector": mandate.max_sector_weight,
+                "max_holdings_per_sector": mandate.max_holdings_per_sector,
                 "carbon_cap_pct_of_benchmark": mandate.carbon_intensity_cap_vs_benchmark,
                 "sector_exclusions_count": len(mandate.sector_exclusions),
                 "frameworks_count": len(mandate.sustainability_frameworks),
@@ -206,6 +217,7 @@ class MandateAgent(BaseAgent):
         lines.append(f"Constraints:")
         lines.append(f"  • Max {mandate.max_single_name_weight*100:.0f}% single name")
         lines.append(f"  • Max {mandate.max_sector_weight*100:.0f}% per sector")
+        lines.append(f"  • Max {mandate.max_holdings_per_sector} holdings per sector")
         lines.append(f"  • Min {mandate.min_sector_count} sectors represented")
         lines.append(
             f"  • Carbon intensity ≤ {mandate.carbon_intensity_cap_vs_benchmark*100:.0f}% of benchmark"
