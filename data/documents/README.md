@@ -1,41 +1,24 @@
-# Document corpus
+# Sustainability Documents
 
-Per the assignment brief (section 8.4), we need to curate at least
-15-20 unstructured documents covering 8-10 material companies.
+This folder is **intentionally empty in the repository** — sustainability reports are
+gitignored to avoid storing copyrighted PDFs and bloating the repo.
 
-Drop PDFs / HTML / text files here. Suggested filename convention:
+To reproduce the document extraction step, download these 10 reports from each
+company's investor-relations website:
 
-`<company_id>_<doc_type>_<year>.<ext>`
+| Company | File name | Source |
+|---|---|---|
+| Iberdrola | `iberdrola_sustainability_2025.pdf` | iberdrola.com |
+| Schneider Electric | `schneider_sustainability_2025.pdf` | se.com |
+| Sanofi | `sanofi_sustainability_2025.pdf` | sanofi.com |
+| ASML | `asml_sustainability_2025.pdf` | asml.com |
+| Bayer | `bayer_sustainability_2025.pdf` | bayer.com |
+| L'Oréal | `loreal_sustainability_2025.pdf` | loreal.com |
+| TotalEnergies | `totalenergies_sustainability_2025.pdf` | totalenergies.com |
+| Unilever | `unilever_sustainability_2025.pdf` | unilever.com |
+| AB InBev | `abinbev_sustainability_2025.pdf` | ab-inbev.com |
+| Allianz | `allianz_sustainability_2025.pdf` | allianz.com |
 
-Examples:
-- `C00042_sustainability_report_2024.pdf`
-- `C00042_tcfd_disclosure_2024.pdf`
-- `C00007_annual_report_2023.pdf`
-- `C00007_ngo_report_global_witness_2023.pdf`
-
-## Document types we want (per brief)
-
-- annual reports
-- sustainability reports / CSR reports
-- TCFD / TNFD / climate reports
-- CSRD / ESRS disclosures where available
-- SBTi target pages (can be screenshots)
-- Transition Pathway Initiative pages
-- Climate Action 100+ benchmark data
-- ENCORE nature-risk pulls
-- WWF Biodiversity Risk Filter outputs
-- WRI Aqueduct outputs
-- Regulatory enforcement notices
-- Reputable news articles
-- NGO reports
-
-## Coverage target
-
-- Major final holdings: at least 5 companies, full doc set
-- Planned exclusions: at least 2 companies, with evidence
-- Watchlist names: at least 1 company
-
-## Owner
-
-Role D curates this folder. Other roles can suggest additions in the
-group chat.
+Cached extraction outputs are committed in `outputs/cache/document_extractions/`,
+so re-running the pipeline does NOT require re-downloading the PDFs unless you
+want to verify extraction quality or test with different prompts.
