@@ -347,9 +347,11 @@ def run_pipeline(reset_log: bool = True) -> dict:
             prices = fa.fetch_price_history(yahoo_tickers=yahoo_tickers, years=fa.BACKTEST_YEARS)
             if not prices.empty:
                 daily_returns = fa.compute_daily_returns(prices)
-                weights = pd.Series(
-                    {t: 1.0 / len(daily_returns.columns) for t in daily_returns.columns}
-                )
+                # Equal-weight portfolio across mapped tickers (must be a dict, not Series)
+                weights = {
+                    t: 1.0 / len(daily_returns.columns)
+                    for t in daily_returns.columns
+                }
                 portfolio_returns = fa.compute_portfolio_returns(daily_returns, weights)
 
                 bench_prices = fa.fetch_price_history(

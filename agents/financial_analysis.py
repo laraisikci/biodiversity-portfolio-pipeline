@@ -66,14 +66,91 @@ BLOOMBERG_TO_YAHOO_SUFFIX = {
 }
 
 
-def bloomberg_to_yahoo_ticker(bloomberg_ticker: str) -> Optional[str]:
-    """Convert 'ABI BB Equity' -> 'ABI.BR' or 'ASML NA Equity' -> 'ASML.AS'.
+# === Static lookup for bare symbols ===
+# The equityBicsV2.csv master uses Bloomberg internal short symbols
+# (e.g. "ASME" for ASML, "BAYN" for Bayer) which are NOT standard exchange
+# tickers and cannot be parsed via the suffix-based mapping above.
+# This static table maps those bare symbols to their Yahoo Finance equivalents.
+#
+# Coverage: 50 EURO STOXX 50 constituents as of May 2026.
+# Verified against company_name fields in the master DataFrame.
 
-    Returns None if format unrecognised.
+BARE_TICKER_TO_YAHOO = {
+    "ASME": "ASML.AS",        # ASML Holding NV
+    "AXA": "CS.PA",           # AXA SA
+    "1N8": "ADYEN.AS",        # Adyen NV
+    "AIL": "AI.PA",            # Air Liquide SA
+    "AIR": "AIR.PA",           # Airbus SE
+    "ALV": "ALV.DE",           # Allianz SE
+    "1NBA": "ABI.BR",          # Anheuser-Busch InBev
+    "1AE": "ARGX.BR",          # Argenx SE
+    "BAS": "BAS.DE",           # BASF SE
+    "BNP": "BNP.PA",           # BNP Paribas SA
+    "BOY": "EN.PA",            # Bouygues SA (note: less common)
+    "BSD2": "SAN.MC",          # Banco Santander SA
+    "BAYN": "BAYN.DE",         # Bayer AG
+    "BMW": "BMW.DE",           # Bayerische Motoren Werke AG
+    "GOB": "SGO.PA",           # Compagnie de Saint-Gobain SA
+    "BSN": "BN.PA",            # Danone SA
+    "DBK": "DBK.DE",           # Deutsche Bank AG
+    "DB1": "DB1.DE",           # Deutsche Boerse AG
+    "DPW": "DHL.DE",           # Deutsche Post / DHL Group
+    "DTE": "DTE.DE",           # Deutsche Telekom AG
+    "ENL": "ENEL.MI",          # Enel SpA
+    "ENI": "ENI.MI",           # Eni SpA
+    "ESL": "EL.PA",            # EssilorLuxottica SA
+    "2FE": "RACE.MI",          # Ferrari NV
+    "HMI": "HEN3.DE",          # Henkel AG
+    "INN1": "INGA.AS",         # ING Groep NV
+    "IBE1": "IBE.MC",          # Iberdrola SA
+    "IXD1": "ITX.MC",          # Industria de Diseno Textil SA (Inditex)
+    "IFX": "IFX.DE",           # Infineon Technologies AG
+    "IES": "ISP.MI",           # Intesa Sanpaolo SpA
+    "AHOG": "AD.AS",           # Koninklijke Ahold Delhaize NV
+    "LOR": "OR.PA",            # L'Oreal SA
+    "MOH": "MC.PA",            # LVMH Moet Hennessy Louis Vuitton SE
+    "MBG": "MBG.DE",           # Mercedes-Benz Group AG
+    "MUV2": "MUV2.DE",         # Muenchener Rueckversicherungs (Munich Re)
+    "04Q": "NDA-FI.HE",        # Nordea Bank Abp
+    "1TY": "PRX.AS",           # Prosus NV
+    "RHM": "RHM.DE",           # Rheinmetall AG
+    "SAP": "SAP.DE",           # SAP SE
+    "SEJ1": "SAN.PA",          # Sanofi
+    "SNW": "SU.PA",            # Schneider Electric SE
+    "SND": "SAF.PA",           # Safran SA
+    "SIE": "SIE.DE",           # Siemens AG
+    "ENR": "ENR.DE",           # Siemens Energy AG
+    "TOTB": "TTE.PA",          # TotalEnergies SE
+    "CRIN": "UCG.MI",          # UniCredit SpA
+    "SQU": "UNA.AS",           # Unilever
+    "VOW": "VOW3.DE",          # Volkswagen AG
+    "WOSB": "WKL.AS",          # Wolters Kluwer NV
+    "ADS": "ADS.DE",           # Adidas AG
+}
+
+
+def bloomberg_to_yahoo_ticker(bloomberg_ticker: str) -> Optional[str]:
+    """Convert a Bloomberg ticker reference to a Yahoo Finance ticker.
+
+    Tries two strategies:
+      1. Static lookup for bare symbols (e.g. "ASME" -> "ASML.AS")
+         This is the path used when reading the `ticker` column from
+         equityBicsV2.csv, which contains Bloomberg internal short symbols.
+      2. Suffix-based parsing for full Bloomberg-style strings
+         (e.g. "ASML NA Equity" -> "ASML.AS").
+
+    Returns None if neither strategy yields a result.
     """
     if not bloomberg_ticker or not isinstance(bloomberg_ticker, str):
         return None
-    parts = bloomberg_ticker.strip().split()
+
+    # Strategy 1: static lookup for bare symbols
+    bare = bloomberg_ticker.strip()
+    if bare in BARE_TICKER_TO_YAHOO:
+        return BARE_TICKER_TO_YAHOO[bare]
+
+    # Strategy 2: parse Bloomberg-style "SYMBOL EXCHANGE Equity"
+    parts = bare.split()
     if len(parts) < 2:
         return None
     symbol = parts[0]
