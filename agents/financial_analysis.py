@@ -1,5 +1,5 @@
 """
-Financial Analysis utility.
+Agent 11 — Financial Analysis.
 
 Fetches historical prices via yfinance and computes standard portfolio
 risk/return metrics:

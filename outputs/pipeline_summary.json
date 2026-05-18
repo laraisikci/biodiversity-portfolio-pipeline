@@ -1,0 +1,22 @@
+{
+  "run_timestamp": "2026-05-18T11:33:14.232717+00:00",
+  "n_universe_companies": 3421,
+  "n_eurostoxx50_filtered": 50,
+  "n_extractions": 10,
+  "n_esg_scores": 50,
+  "n_climate_scores": 50,
+  "n_biodiversity_scores": 50,
+  "n_greenwashing_flags": 10,
+  "greenwashing_distribution": {
+    "low": 7,
+    "medium": 3,
+    "high": 0
+  },
+  "n_holdings": 24,
+  "n_excluded": 10,
+  "n_overrides_applied": 2,
+  "reviewers": [
+    "LI"
+  ],
+  "financial_metrics": null
+}
